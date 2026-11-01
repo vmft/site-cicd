@@ -21,6 +21,11 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        
+      - name: Lint HTML
+        uses: anothrNick/github-action-html-validate@v1
+        with:
+          files: 'index.html'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
